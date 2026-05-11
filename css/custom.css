@@ -1,0 +1,36 @@
+#web_bg {
+  background-image: url('https://pic.616pic.com/photoone/00/05/10/618e21dbd7cf73145.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* 首页文章卡片透明 */
+#recent-posts .recent-post-item {
+  background: rgba(255, 255, 255, 0.6) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* 侧边栏卡片透明 */
+#aside-content .card-widget {
+  background: rgba(255, 255, 255, 0.6) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* 文章和独立页面主体透明 */
+.layout > #post,
+.layout > #page {
+  background: rgba(255, 255, 255, 0.6) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* 夜间模式透明 */
+[data-theme="dark"] #recent-posts .recent-post-item,
+[data-theme="dark"] #aside-content .card-widget,
+[data-theme="dark"] .layout > #post,
+[data-theme="dark"] .layout > #page {
+  background: rgba(0, 0, 0, 0.5) !important;
+}
