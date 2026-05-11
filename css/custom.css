@@ -1,12 +1,12 @@
 #web_bg {
-  background-image: url('/image/home-bg.jpg'), url('https://pic.dbw.cn/0/09/53/03/9530314_869197.jpg'), linear-gradient(135deg, #d9eef7 0%, #6fa8c8 45%, #2f7ba5 100%);
+  background-image: url('/image/55465536eda2b6ed1699966682.png'), linear-gradient(135deg, #d9eef7 0%, #6fa8c8 45%, #2f7ba5 100%);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
 
 #page-header.full_page {
-  background-image: url('/image/home-bg.jpg'), url('https://pic.dbw.cn/0/09/53/03/9530314_869197.jpg'), linear-gradient(135deg, #d9eef7 0%, #6fa8c8 45%, #2f7ba5 100%) !important;
+  background-image: url('/image/55465536eda2b6ed1699966682.png'), linear-gradient(135deg, #d9eef7 0%, #6fa8c8 45%, #2f7ba5 100%) !important;
   background-size: cover;
   background-position: center;
 }
@@ -25,6 +25,11 @@
   background: rgba(255, 255, 255, 0.7) !important;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+}
+
+#recent-posts,
+#recent-posts .recent-post-items {
+  background: transparent !important;
 }
 
 /* 侧边栏卡片透明 */
