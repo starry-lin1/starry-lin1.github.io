@@ -11,13 +11,22 @@
   background-position: center;
 }
 
-#subtitle {
-  transition: opacity 0.45s ease, transform 0.45s ease;
+#subtitle.starry-typing::after {
+  content: "";
+  display: inline-block;
+  width: 0.08em;
+  height: 1em;
+  margin-left: 0.12em;
+  border-radius: 999px;
+  background: currentColor;
+  vertical-align: -0.12em;
+  animation: starry-caret 0.82s steps(1) infinite;
 }
 
-#subtitle.subtitle-switching {
-  opacity: 0;
-  transform: translateY(8px);
+@keyframes starry-caret {
+  50% {
+    opacity: 0;
+  }
 }
 
 /* 首页文章卡片透明 */
@@ -105,19 +114,19 @@
 
 .starry-dogs {
   position: fixed;
-  right: 78px;
-  bottom: 18px;
+  right: 72px;
+  bottom: 16px;
   z-index: 1002;
   display: flex;
   align-items: flex-end;
-  gap: 8px;
+  gap: 2px;
   pointer-events: auto;
 }
 
 .line-dog {
   position: relative;
-  width: 86px;
-  height: 62px;
+  width: 122px;
+  height: 86px;
   padding: 0;
   border: 0;
   background: transparent;
@@ -136,15 +145,37 @@
 .line-dog path {
   fill: none;
   stroke: currentColor;
-  stroke-width: 4;
+  stroke-width: 4.4;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
 
+.line-dog .dog-fill {
+  stroke-width: 0;
+}
+
+.line-dog .dog-fill-white {
+  fill: rgba(255, 255, 255, 0.82);
+}
+
+.line-dog .dog-fill-tan {
+  fill: rgba(224, 174, 103, 0.76);
+}
+
+.line-dog .fluffy {
+  stroke-width: 4.8;
+}
+
+.dog-one {
+  animation: dog-pounce 3.6s ease-in-out infinite;
+}
+
 .dog-two {
-  width: 76px;
+  width: 112px;
+  height: 82px;
   color: rgba(95, 72, 82, 0.9);
-  transform: scaleX(-1);
+  transform: rotate(-2deg);
+  animation: dog-nuzzle 3.6s ease-in-out infinite;
 }
 
 .line-dog:hover,
@@ -152,7 +183,7 @@
   color: #ff7fa3;
 }
 
-.line-dog.is-happy {
+.line-dog.is-happy svg {
   animation: dog-hop 0.45s ease;
 }
 
@@ -172,7 +203,7 @@
 .dog-note {
   position: absolute;
   right: 4px;
-  top: -10px;
+  top: -14px;
   padding: 2px 7px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.82);
@@ -191,6 +222,61 @@
   transform: translateY(0);
 }
 
+.play-heart {
+  position: absolute;
+  left: 106px;
+  top: -4px;
+  width: 16px;
+  height: 16px;
+  opacity: 0.7;
+  transform: rotate(-45deg);
+  animation: heart-float 1.8s ease-in-out infinite;
+}
+
+.play-heart,
+.play-heart::before,
+.play-heart::after {
+  background: rgba(255, 126, 164, 0.88);
+}
+
+.play-heart::before,
+.play-heart::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+
+.play-heart::before {
+  top: -8px;
+  left: 0;
+}
+
+.play-heart::after {
+  left: 8px;
+  top: 0;
+}
+
+.play-ball {
+  position: absolute;
+  left: 118px;
+  bottom: 10px;
+  width: 18px;
+  height: 18px;
+  border: 3px solid rgba(255, 127, 163, 0.78);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 0.9) 0 18%, transparent 20%),
+    rgba(255, 245, 248, 0.76);
+  box-shadow: 0 5px 14px rgba(80, 60, 70, 0.14);
+  animation: ball-roll 3.6s ease-in-out infinite;
+}
+
+.starry-dogs.is-playing .play-ball {
+  animation: ball-roll-fast 0.7s ease-in-out;
+}
+
 @keyframes dog-wag {
   from {
     transform: rotate(-8deg);
@@ -198,6 +284,36 @@
 
   to {
     transform: rotate(18deg);
+  }
+}
+
+@keyframes dog-pounce {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+
+  34% {
+    transform: translateY(-7px) rotate(2deg);
+  }
+
+  58% {
+    transform: translateX(8px) translateY(0) rotate(0deg);
+  }
+}
+
+@keyframes dog-nuzzle {
+  0%,
+  100% {
+    transform: translateX(0) rotate(-2deg);
+  }
+
+  42% {
+    transform: translateX(-12px) translateY(-2px) rotate(4deg);
+  }
+
+  66% {
+    transform: translateX(-2px) translateY(1px) rotate(-4deg);
   }
 }
 
@@ -212,19 +328,71 @@
   }
 }
 
+@keyframes heart-float {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: translateY(4px) rotate(-45deg) scale(0.82);
+  }
+
+  45% {
+    opacity: 0.95;
+    transform: translateY(-8px) rotate(-45deg) scale(1);
+  }
+}
+
+@keyframes ball-roll {
+  0%,
+  100% {
+    transform: translateX(-10px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateX(22px) rotate(180deg);
+  }
+}
+
+@keyframes ball-roll-fast {
+  0% {
+    transform: translateX(-12px) rotate(0deg) scale(1);
+  }
+
+  50% {
+    transform: translateX(34px) rotate(210deg) scale(1.12);
+  }
+
+  100% {
+    transform: translateX(-10px) rotate(360deg) scale(1);
+  }
+}
+
 @media (max-width: 768px) {
   .starry-dogs {
-    right: 58px;
-    bottom: 12px;
+    right: 52px;
+    bottom: 10px;
     gap: 4px;
   }
 
   .line-dog {
-    width: 64px;
-    height: 48px;
+    width: 78px;
+    height: 58px;
   }
 
   .dog-two {
-    width: 58px;
+    width: 72px;
+    height: 54px;
+  }
+
+  .play-heart {
+    left: 68px;
+    top: -2px;
+    transform: rotate(-45deg) scale(0.75);
+  }
+
+  .play-ball {
+    left: 76px;
+    bottom: 7px;
+    width: 14px;
+    height: 14px;
   }
 }
