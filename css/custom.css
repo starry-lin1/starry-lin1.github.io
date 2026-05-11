@@ -1,8 +1,23 @@
 #web_bg {
-  background-image: url('https://pic.dbw.cn/0/09/53/03/9530314_869197.jpg');
+  background-image: url('/image/home-bg.jpg'), url('https://pic.dbw.cn/0/09/53/03/9530314_869197.jpg'), linear-gradient(135deg, #d9eef7 0%, #6fa8c8 45%, #2f7ba5 100%);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+}
+
+#page-header.full_page {
+  background-image: url('/image/home-bg.jpg'), url('https://pic.dbw.cn/0/09/53/03/9530314_869197.jpg'), linear-gradient(135deg, #d9eef7 0%, #6fa8c8 45%, #2f7ba5 100%) !important;
+  background-size: cover;
+  background-position: center;
+}
+
+#subtitle {
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+#subtitle.subtitle-switching {
+  opacity: 0;
+  transform: translateY(8px);
 }
 
 /* 首页文章卡片透明 */
